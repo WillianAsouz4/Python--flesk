@@ -15,15 +15,15 @@ if True and True:
     print("Vai executar")
 
 if True and True:
-    print("Não vai executar")
+    print(" vai executar")
 
 if True and False:
-    print("Vai Rolar Sexo")
+    print("nao vai executar")
 
 
 if True or False:
     print("Vai executar")
 
     if True or False:
-        print("Não vai Rolar zexo")
+        print("vai executar")
 
