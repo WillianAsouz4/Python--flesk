@@ -1,3 +1,17 @@
+def adicionar_tarefa(tarefas, nome_tarefa):
+   
+      #Tarefa: Nome da tarefa
+      #Completada: Status da tarefa (Completa ou nao)
+
+
+   tarefa = {"nome": nome_tarefa, "completada": False}
+   tarefa.append()
+   return
+
+tarefa = []
+
+
+
 while True:
  print("\n Menu do Gerenciador de Tarefas")
  print("1. Adicionar Tarefa")
