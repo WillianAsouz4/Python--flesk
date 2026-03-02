@@ -1,15 +1,16 @@
 def adicionar_tarefa(tarefas, nome_tarefa):
-   
-      #Tarefa: Nome da tarefa
-      #Completada: Status da tarefa (Completa ou nao)
-
-
-   tarefa = {"nome": nome_tarefa, "completada": False}
-   tarefa.append()
+   tarefa = {"tarefa": nome_tarefa, "completada": False}
+   tarefas.append(tarefa)
+   print(f"A tarefa {nome_tarefa} foi adicionada com sucesso!")
    return
 
-tarefa = []
-
+def ver_tarefas(tarefas):
+  print("\n Tarefas Pendentes:")
+  for idx, tarefa in enumerate(tarefas, start=1):
+    status = "✔" if tarefa["completada"] else " "
+    print(f"{idx}. [{status}] {tarefa['tarefa']}")
+    
+tarefas = []
 
 
 while True:
@@ -23,15 +24,14 @@ while True:
 
  escolha = input("Escolha uma opção: ")
  if escolha == "1":
-     print("1")
- if escolha == "2":
-    print("2")
- if escolha == "3":
-    print("3")
- if escolha == "4":
-    print("4")
- if escolha == "5":
-    print("5")
- if escolha == "6":
+   # Adicionar Tarefa
+   nome_tarefa = input("Digite o nome da tarefa:")
+   adicionar_tarefa(tarefas, nome_tarefa)
+
+ elif escolha == "2":
+   ver_tarefas(tarefas)
+
+   
+ elif escolha == "6":
     print("Fin do Programa!")
     break
