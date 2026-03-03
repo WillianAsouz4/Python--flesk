@@ -1,4 +1,4 @@
-
+# Gerenciador de Tarefas Simplis em Python
 
 def adicionar_tarefa(tarefas, nome_tarefa):
    tarefa = {"tarefa": nome_tarefa, "completada": False}
