@@ -1,16 +1,33 @@
 # Gerenciador de Tarefas Simplis em Python
 
+"""-------------------------------
+|                                |
+|   Adicionar Tarefa             |
+|                                | 
+----------------------------------"""
 def adicionar_tarefa(tarefas, nome_tarefa):
    tarefa = {"tarefa": nome_tarefa, "completada": False}
    tarefas.append(tarefa)
    print(f"A tarefa {nome_tarefa} foi adicionada com sucesso!")
    return
 
+"""-------------------------------
+|                                |
+|   visualizar Tarefa            |
+|                                | 
+----------------------------------"""
+
 def ver_tarefas(tarefas):
   print("\n Tarefas Pendentes:")
   for idx, tarefa in enumerate(tarefas, start=1):
     status = "✔" if tarefa["completada"] else " "
     print(f"{idx}. [{status}] {tarefa['tarefa']}")
+
+"""-------------------------------
+|                                |
+|   Atualizar Tarefa             |
+|                                | 
+----------------------------------"""
 
 def update_tarefa(tarefas, idx_tarefa, novo_nome_tarefa):
  
@@ -22,6 +39,12 @@ def update_tarefa(tarefas, idx_tarefa, novo_nome_tarefa):
     print("Ta faltando coisa ai maninho")
   return
 
+"""-------------------------------
+|                                |
+|   Completar Tarefa             |
+|                                | 
+----------------------------------"""
+
 def complit_task(tarefas, idx_tarefa):
   idx_tarefa = int(idx_tarefa) -1
 
@@ -29,6 +52,12 @@ def complit_task(tarefas, idx_tarefa):
     tarefas[idx_tarefa]["completada"] = True
     print(f"Tarefa {idx_tarefa} foi completada com sucesso!")
   return
+
+"""-------------------------------
+|                                |
+|   Deletar Tarefa               |
+|                                | 
+----------------------------------"""
 
 def delet_task (tarefas, idx_tarefa):
   for tarefa in tarefas:
@@ -39,6 +68,11 @@ def delet_task (tarefas, idx_tarefa):
     
 tarefas = []
 
+"""-------------------------------
+|                                |
+|            Menu                |
+|                                | 
+----------------------------------"""
 
 while True:
  print("\n Menu do Gerenciador de Tarefas")
